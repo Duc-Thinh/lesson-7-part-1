@@ -1,0 +1,10 @@
+a(href="/todos/create") New
+form(action="/todos", method="GET")
+    input(type="text", name="q")
+    button Search
+ul  
+if todoList
+    each todo in todoList
+        li      
+          span= todo.text
+          a(href="/todos/"+todo.id) Xoá
